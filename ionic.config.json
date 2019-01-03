@@ -1,5 +1,6 @@
 {
   "name": "myAppIonic",
   "integrations": {},
-  "type": "ionic-angular"
+  "type": "ionic-angular",
+  "id": "f28678fb"
 }
