@@ -13,6 +13,7 @@ import { DetalleComponent } from '../detalle/detalle.component';
 })
 
 export class PendientesComponent implements OnInit {
+    
     constructor (
         private _listaTareas : ListaTareasService,
         private navCtrl : NavController ) { }

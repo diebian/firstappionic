@@ -7,6 +7,17 @@
 </ion-header>
   
   <ion-content padding>
+
+      <ion-grid *ngIf="(_listaTareas.listas | pendientes ).length === 0">
+        <ion-row>
+          <ion-col class="text-center caja-vacia">
+            <ion-icon class="icono-grande" ios="ios-sunny" md="md-sunny"></ion-icon>
+            <p>
+              No existen tareas pendientes
+            </p>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
       
       <ion-card *ngFor="let lista of _listaTareas.listas | pendientes ; let i = index">
        
@@ -27,7 +38,7 @@
               {{ item.nombre }}
             </ion-item>
 
-            <ion-item *ngIf="lista.items.length > 3" class="text-center">
+            <ion-item *ngIf="lista.items.length > 3" class="text-center" (click)="verDetalle(lista, i)">
               <ion-icon color="primary" ios="ios-arrow-dropdown" md="md-arrow-dropdown"></ion-icon>
             </ion-item>
           </ion-list> 
