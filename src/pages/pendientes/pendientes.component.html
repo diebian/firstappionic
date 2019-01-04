@@ -1,0 +1,44 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>
+      Tareas pendientes
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+  
+  <ion-content padding>
+
+      <ion-card *ngFor="let lista of _listaDeseos.listas">
+        <ion-card-header>
+          <ion-item>
+            BOTON
+          </ion-item>
+          <h2>
+            {{ lista.nombre }}
+          </h2>
+        </ion-card-header>
+        <ion-card-content>
+          <ion-list>
+              <ion-icon ios="ios-checkmark-circle" md="md-checkmark-circle"></ion-icon>
+              item 1
+          </ion-list>
+          <ion-list>
+              <ion-icon ios="ios-checkmark-circle" md="md-checkmark-circle"></ion-icon>
+              item 1
+          </ion-list>
+          <ion-list>
+              <ion-icon ios="ios-checkmark-circle" md="md-checkmark-circle"></ion-icon>
+              item 1
+          </ion-list>
+        </ion-card-content>
+        
+      </ion-card>
+
+      <ion-fab right bottom>
+        <button ion-fab color="primary" (click)="irAgregar()">
+          <ion-icon ios="ios-add" md="md-add"></ion-icon>
+        </button> 
+      </ion-fab>
+
+  </ion-content>
+  
