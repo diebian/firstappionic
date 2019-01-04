@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Lista, ListaItem } from '../../app/clases/index';
 import { AlertController, NavController } from 'ionic-angular';
-import { ListaDeseosService } from '../../app/services/lista-deseos.service';
+import { ListaTareasService } from '../../app/services/lista-deseos.service';
 
 // import { stringify } from '@angular/compiler/src/util';
 
@@ -21,7 +21,7 @@ export class AgregarComponent implements OnInit{
   constructor(
     public alertCtrl : AlertController,
     public navCtrl : NavController,
-    public _listaDeseos : ListaDeseosService 
+    public _listaTareas : ListaTareasService 
   ) {  }
 
   ngOnInit() {}
@@ -62,7 +62,8 @@ export class AgregarComponent implements OnInit{
     let lista = new Lista( this.nombreLista );
     lista.items = this.items;
 
-    this._listaDeseos.listas.push( lista );
+    // this._listaTareas.listas.push( lista );
+    this._listaTareas.agregarLista( lista );
     this.navCtrl.pop();
     
   }
